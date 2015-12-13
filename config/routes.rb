@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :registry_types
+
   resources :registries
 
   devise_for :admin_users, ActiveAdmin::Devise.config
