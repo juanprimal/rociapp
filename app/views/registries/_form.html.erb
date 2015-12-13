@@ -1,0 +1,257 @@
+<%= form_for(@registry) do |f| %>
+  <% if @registry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registry.errors.count, "error") %> prohibited this registry from being saved:</h2>
+
+      <ul>
+      <% @registry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :edad %><br>
+    <%= f.text_field :edad %>
+  </div>
+  <div class="field">
+    <%= f.label :genero %><br>
+    <%= f.text_field :genero %>
+  </div>
+  <div class="field">
+    <%= f.label :etilogia %><br>
+    <%= f.text_field :etilogia %>
+  </div>
+  <div class="field">
+    <%= f.label :frac_eyeccion %><br>
+    <%= f.text_field :frac_eyeccion %>
+  </div>
+  <div class="field">
+    <%= f.label :imc %><br>
+    <%= f.text_field :imc %>
+  </div>
+  <div class="field">
+    <%= f.label :hemoglobina %><br>
+    <%= f.text_field :hemoglobina %>
+  </div>
+  <div class="field">
+    <%= f.label :creatinina %><br>
+    <%= f.text_field :creatinina %>
+  </div>
+  <div class="field">
+    <%= f.label :bnp %><br>
+    <%= f.text_field :bnp %>
+  </div>
+  <div class="field">
+    <%= f.label :pro_bnp %><br>
+    <%= f.text_field :pro_bnp %>
+  </div>
+  <div class="field">
+    <%= f.label :eac %><br>
+    <%= f.text_field :eac %>
+  </div>
+  <div class="field">
+    <%= f.label :diabetes %><br>
+    <%= f.text_field :diabetes %>
+  </div>
+  <div class="field">
+    <%= f.label :irc %><br>
+    <%= f.text_field :irc %>
+  </div>
+  <div class="field">
+    <%= f.label :epoc %><br>
+    <%= f.text_field :epoc %>
+  </div>
+  <div class="field">
+    <%= f.label :acv %><br>
+    <%= f.text_field :acv %>
+  </div>
+  <div class="field">
+    <%= f.label :fa %><br>
+    <%= f.text_field :fa %>
+  </div>
+  <div class="field">
+    <%= f.label :pas_mmhg %><br>
+    <%= f.number_field :pas_mmhg %>
+  </div>
+  <div class="field">
+    <%= f.label :pad_mmhg %><br>
+    <%= f.number_field :pad_mmhg %>
+  </div>
+  <div class="field">
+    <%= f.label :fc %><br>
+    <%= f.number_field :fc %>
+  </div>
+  <div class="field">
+    <%= f.label :clase_funcional_nyha %><br>
+    <%= f.text_field :clase_funcional_nyha %>
+  </div>
+  <div class="field">
+    <%= f.label :betabloqueador %><br>
+    <%= f.text_field :betabloqueador %>
+  </div>
+  <div class="field">
+    <%= f.label :anticoagulacion %><br>
+    <%= f.text_field :anticoagulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :iecas %><br>
+    <%= f.text_field :iecas %>
+  </div>
+  <div class="field">
+    <%= f.label :ara_ii %><br>
+    <%= f.text_field :ara_ii %>
+  </div>
+  <div class="field">
+    <%= f.label :mra %><br>
+    <%= f.text_field :mra %>
+  </div>
+  <div class="field">
+    <%= f.label :diureticos %><br>
+    <%= f.text_field :diureticos %>
+  </div>
+  <div class="field">
+    <%= f.label :ivabradina %><br>
+    <%= f.text_field :ivabradina %>
+  </div>
+  <div class="field">
+    <%= f.label :material_educativo %><br>
+    <%= f.text_field :material_educativo %>
+  </div>
+  <div class="field">
+    <%= f.label :charla_informativa %><br>
+    <%= f.text_field :charla_informativa %>
+  </div>
+  <div class="field">
+    <%= f.label :programa_seguimiento %><br>
+    <%= f.text_field :programa_seguimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :encargado_segiumiento %><br>
+    <%= f.text_field :encargado_segiumiento %>
+  </div>
+  <div class="field">
+    <%= f.label :formato_autoseguramiento_paciente %><br>
+    <%= f.text_field :formato_autoseguramiento_paciente %>
+  </div>
+  <div class="field">
+    <%= f.label :instalo_app %><br>
+    <%= f.text_field :instalo_app %>
+  </div>
+  <div class="field">
+    <%= f.label :lista_verificacion_medidas %><br>
+    <%= f.text_field :lista_verificacion_medidas %>
+  </div>
+  <div class="field">
+    <%= f.label :registry_type_id %><br>
+    <%= f.text_field :registry_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :betabloqueador_actual %><br>
+    <%= f.text_field :betabloqueador_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :betabloqueador_adherido %><br>
+    <%= f.text_field :betabloqueador_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :betabloqueador_titulacion %><br>
+    <%= f.text_field :betabloqueador_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :anticoagulacion_indicada %><br>
+    <%= f.text_field :anticoagulacion_indicada %>
+  </div>
+  <div class="field">
+    <%= f.label :anticoagulacion_adherido %><br>
+    <%= f.text_field :anticoagulacion_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :iecas_actual %><br>
+    <%= f.text_field :iecas_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :iecas_adherido %><br>
+    <%= f.text_field :iecas_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :iecas_titulacion %><br>
+    <%= f.text_field :iecas_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :araii_actual %><br>
+    <%= f.text_field :araii_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :araii_adherido %><br>
+    <%= f.text_field :araii_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :araii_titulacion %><br>
+    <%= f.text_field :araii_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :mra_actual %><br>
+    <%= f.text_field :mra_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :mra_adherido %><br>
+    <%= f.text_field :mra_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :mra_titulacion %><br>
+    <%= f.text_field :mra_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :diureticos_actual %><br>
+    <%= f.text_field :diureticos_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :diureticos_adherido %><br>
+    <%= f.text_field :diureticos_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :diureticos_titulacion %><br>
+    <%= f.text_field :diureticos_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :ivabradina_actual %><br>
+    <%= f.text_field :ivabradina_actual %>
+  </div>
+  <div class="field">
+    <%= f.label :ivabradina_adherido %><br>
+    <%= f.text_field :ivabradina_adherido %>
+  </div>
+  <div class="field">
+    <%= f.label :ivabradina_titulacion %><br>
+    <%= f.text_field :ivabradina_titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :visita_seguimiento %><br>
+    <%= f.text_field :visita_seguimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :encargado_visita %><br>
+    <%= f.text_field :encargado_visita %>
+  </div>
+  <div class="field">
+    <%= f.label :dias_despues_alta %><br>
+    <%= f.text_field :dias_despues_alta %>
+  </div>
+  <div class="field">
+    <%= f.label :llenado_formato_autoseguimiento %><br>
+    <%= f.text_field :llenado_formato_autoseguimiento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,143 @@
+<h1>Listing registries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Edad</th>
+      <th>Genero</th>
+      <th>Etilogia</th>
+      <th>Frac eyeccion</th>
+      <th>Imc</th>
+      <th>Hemoglobina</th>
+      <th>Creatinina</th>
+      <th>Bnp</th>
+      <th>Pro bnp</th>
+      <th>Eac</th>
+      <th>Diabetes</th>
+      <th>Irc</th>
+      <th>Epoc</th>
+      <th>Acv</th>
+      <th>Fa</th>
+      <th>Pas mmhg</th>
+      <th>Pad mmhg</th>
+      <th>Fc</th>
+      <th>Clase funcional nyha</th>
+      <th>Betabloqueador</th>
+      <th>Anticoagulacion</th>
+      <th>Iecas</th>
+      <th>Ara ii</th>
+      <th>Mra</th>
+      <th>Diureticos</th>
+      <th>Ivabradina</th>
+      <th>Material educativo</th>
+      <th>Charla informativa</th>
+      <th>Programa seguimiento</th>
+      <th>Encargado segiumiento</th>
+      <th>Formato autoseguramiento paciente</th>
+      <th>Instalo app</th>
+      <th>Lista verificacion medidas</th>
+      <th>Registry type</th>
+      <th>User</th>
+      <th>Betabloqueador actual</th>
+      <th>Betabloqueador adherido</th>
+      <th>Betabloqueador titulacion</th>
+      <th>Anticoagulacion indicada</th>
+      <th>Anticoagulacion adherido</th>
+      <th>Iecas actual</th>
+      <th>Iecas adherido</th>
+      <th>Iecas titulacion</th>
+      <th>Araii actual</th>
+      <th>Araii adherido</th>
+      <th>Araii titulacion</th>
+      <th>Mra actual</th>
+      <th>Mra adherido</th>
+      <th>Mra titulacion</th>
+      <th>Diureticos actual</th>
+      <th>Diureticos adherido</th>
+      <th>Diureticos titulacion</th>
+      <th>Ivabradina actual</th>
+      <th>Ivabradina adherido</th>
+      <th>Ivabradina titulacion</th>
+      <th>Visita seguimiento</th>
+      <th>Encargado visita</th>
+      <th>Dias despues alta</th>
+      <th>Llenado formato autoseguimiento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registries.each do |registry| %>
+      <tr>
+        <td><%= registry.codigo %></td>
+        <td><%= registry.edad %></td>
+        <td><%= registry.genero %></td>
+        <td><%= registry.etilogia %></td>
+        <td><%= registry.frac_eyeccion %></td>
+        <td><%= registry.imc %></td>
+        <td><%= registry.hemoglobina %></td>
+        <td><%= registry.creatinina %></td>
+        <td><%= registry.bnp %></td>
+        <td><%= registry.pro_bnp %></td>
+        <td><%= registry.eac %></td>
+        <td><%= registry.diabetes %></td>
+        <td><%= registry.irc %></td>
+        <td><%= registry.epoc %></td>
+        <td><%= registry.acv %></td>
+        <td><%= registry.fa %></td>
+        <td><%= registry.pas_mmhg %></td>
+        <td><%= registry.pad_mmhg %></td>
+        <td><%= registry.fc %></td>
+        <td><%= registry.clase_funcional_nyha %></td>
+        <td><%= registry.betabloqueador %></td>
+        <td><%= registry.anticoagulacion %></td>
+        <td><%= registry.iecas %></td>
+        <td><%= registry.ara_ii %></td>
+        <td><%= registry.mra %></td>
+        <td><%= registry.diureticos %></td>
+        <td><%= registry.ivabradina %></td>
+        <td><%= registry.material_educativo %></td>
+        <td><%= registry.charla_informativa %></td>
+        <td><%= registry.programa_seguimiento %></td>
+        <td><%= registry.encargado_segiumiento %></td>
+        <td><%= registry.formato_autoseguramiento_paciente %></td>
+        <td><%= registry.instalo_app %></td>
+        <td><%= registry.lista_verificacion_medidas %></td>
+        <td><%= registry.registry_type %></td>
+        <td><%= registry.user %></td>
+        <td><%= registry.betabloqueador_actual %></td>
+        <td><%= registry.betabloqueador_adherido %></td>
+        <td><%= registry.betabloqueador_titulacion %></td>
+        <td><%= registry.anticoagulacion_indicada %></td>
+        <td><%= registry.anticoagulacion_adherido %></td>
+        <td><%= registry.iecas_actual %></td>
+        <td><%= registry.iecas_adherido %></td>
+        <td><%= registry.iecas_titulacion %></td>
+        <td><%= registry.araii_actual %></td>
+        <td><%= registry.araii_adherido %></td>
+        <td><%= registry.araii_titulacion %></td>
+        <td><%= registry.mra_actual %></td>
+        <td><%= registry.mra_adherido %></td>
+        <td><%= registry.mra_titulacion %></td>
+        <td><%= registry.diureticos_actual %></td>
+        <td><%= registry.diureticos_adherido %></td>
+        <td><%= registry.diureticos_titulacion %></td>
+        <td><%= registry.ivabradina_actual %></td>
+        <td><%= registry.ivabradina_adherido %></td>
+        <td><%= registry.ivabradina_titulacion %></td>
+        <td><%= registry.visita_seguimiento %></td>
+        <td><%= registry.encargado_visita %></td>
+        <td><%= registry.dias_despues_alta %></td>
+        <td><%= registry.llenado_formato_autoseguimiento %></td>
+        <td><%= link_to 'Show', registry %></td>
+        <td><%= link_to 'Edit', edit_registry_path(registry) %></td>
+        <td><%= link_to 'Destroy', registry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registry', new_registry_path %>
