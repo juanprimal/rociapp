@@ -1,5 +1,6 @@
-<h1>New registry</h1>
+<%- model_class = Registry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => Registry %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', registries_path %>

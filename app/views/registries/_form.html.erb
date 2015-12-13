@@ -1,257 +1,358 @@
-<%= form_for(@registry) do |f| %>
-  <% if @registry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@registry.errors.count, "error") %> prohibited this registry from being saved:</h2>
-
-      <ul>
-      <% @registry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @registry, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :codigo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :codigo, :class => 'text-field form-control' %>
     </div>
-  <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :edad, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :edad, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :genero, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :genero, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :etilogia, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :etilogia, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :frac_eyeccion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :frac_eyeccion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :imc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :imc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :hemoglobina, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :hemoglobina, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :creatinina, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :creatinina, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :bnp, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :bnp, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pro_bnp, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :pro_bnp, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :eac, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :eac, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diabetes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diabetes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :irc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :irc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :epoc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :epoc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :acv, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :acv, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fa, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :fa, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pas_mmhg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :pas_mmhg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :pad_mmhg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :pad_mmhg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :fc, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :clase_funcional_nyha, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :clase_funcional_nyha, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :betabloqueador, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :betabloqueador, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :anticoagulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :anticoagulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :iecas, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :iecas, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ara_ii, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ara_ii, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mra, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mra, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diureticos, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diureticos, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ivabradina, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ivabradina, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :material_educativo, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :material_educativo, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :charla_informativa, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :charla_informativa, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :programa_seguimiento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :programa_seguimiento, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :encargado_segiumiento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :encargado_segiumiento, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :formato_autoseguramiento_paciente, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :formato_autoseguramiento_paciente, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :instalo_app, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :instalo_app, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :lista_verificacion_medidas, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :lista_verificacion_medidas, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :betabloqueador_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :betabloqueador_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :betabloqueador_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :betabloqueador_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :betabloqueador_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :betabloqueador_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :anticoagulacion_indicada, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :anticoagulacion_indicada, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :anticoagulacion_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :anticoagulacion_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :iecas_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :iecas_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :iecas_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :iecas_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :iecas_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :iecas_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :araii_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :araii_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :araii_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :araii_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :araii_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :araii_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mra_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mra_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mra_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mra_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mra_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mra_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diureticos_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diureticos_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diureticos_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diureticos_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :diureticos_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :diureticos_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ivabradina_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ivabradina_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ivabradina_adherido, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ivabradina_adherido, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :ivabradina_titulacion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :ivabradina_titulacion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :visita_seguimiento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :visita_seguimiento, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :encargado_visita, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :encargado_visita, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :dias_despues_alta, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :dias_despues_alta, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :llenado_formato_autoseguimiento, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :llenado_formato_autoseguimiento, :class => 'text-field form-control' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :codigo %><br>
-    <%= f.text_field :codigo %>
-  </div>
-  <div class="field">
-    <%= f.label :edad %><br>
-    <%= f.text_field :edad %>
-  </div>
-  <div class="field">
-    <%= f.label :genero %><br>
-    <%= f.text_field :genero %>
-  </div>
-  <div class="field">
-    <%= f.label :etilogia %><br>
-    <%= f.text_field :etilogia %>
-  </div>
-  <div class="field">
-    <%= f.label :frac_eyeccion %><br>
-    <%= f.text_field :frac_eyeccion %>
-  </div>
-  <div class="field">
-    <%= f.label :imc %><br>
-    <%= f.text_field :imc %>
-  </div>
-  <div class="field">
-    <%= f.label :hemoglobina %><br>
-    <%= f.text_field :hemoglobina %>
-  </div>
-  <div class="field">
-    <%= f.label :creatinina %><br>
-    <%= f.text_field :creatinina %>
-  </div>
-  <div class="field">
-    <%= f.label :bnp %><br>
-    <%= f.text_field :bnp %>
-  </div>
-  <div class="field">
-    <%= f.label :pro_bnp %><br>
-    <%= f.text_field :pro_bnp %>
-  </div>
-  <div class="field">
-    <%= f.label :eac %><br>
-    <%= f.text_field :eac %>
-  </div>
-  <div class="field">
-    <%= f.label :diabetes %><br>
-    <%= f.text_field :diabetes %>
-  </div>
-  <div class="field">
-    <%= f.label :irc %><br>
-    <%= f.text_field :irc %>
-  </div>
-  <div class="field">
-    <%= f.label :epoc %><br>
-    <%= f.text_field :epoc %>
-  </div>
-  <div class="field">
-    <%= f.label :acv %><br>
-    <%= f.text_field :acv %>
-  </div>
-  <div class="field">
-    <%= f.label :fa %><br>
-    <%= f.text_field :fa %>
-  </div>
-  <div class="field">
-    <%= f.label :pas_mmhg %><br>
-    <%= f.number_field :pas_mmhg %>
-  </div>
-  <div class="field">
-    <%= f.label :pad_mmhg %><br>
-    <%= f.number_field :pad_mmhg %>
-  </div>
-  <div class="field">
-    <%= f.label :fc %><br>
-    <%= f.number_field :fc %>
-  </div>
-  <div class="field">
-    <%= f.label :clase_funcional_nyha %><br>
-    <%= f.text_field :clase_funcional_nyha %>
-  </div>
-  <div class="field">
-    <%= f.label :betabloqueador %><br>
-    <%= f.text_field :betabloqueador %>
-  </div>
-  <div class="field">
-    <%= f.label :anticoagulacion %><br>
-    <%= f.text_field :anticoagulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :iecas %><br>
-    <%= f.text_field :iecas %>
-  </div>
-  <div class="field">
-    <%= f.label :ara_ii %><br>
-    <%= f.text_field :ara_ii %>
-  </div>
-  <div class="field">
-    <%= f.label :mra %><br>
-    <%= f.text_field :mra %>
-  </div>
-  <div class="field">
-    <%= f.label :diureticos %><br>
-    <%= f.text_field :diureticos %>
-  </div>
-  <div class="field">
-    <%= f.label :ivabradina %><br>
-    <%= f.text_field :ivabradina %>
-  </div>
-  <div class="field">
-    <%= f.label :material_educativo %><br>
-    <%= f.text_field :material_educativo %>
-  </div>
-  <div class="field">
-    <%= f.label :charla_informativa %><br>
-    <%= f.text_field :charla_informativa %>
-  </div>
-  <div class="field">
-    <%= f.label :programa_seguimiento %><br>
-    <%= f.text_field :programa_seguimiento %>
-  </div>
-  <div class="field">
-    <%= f.label :encargado_segiumiento %><br>
-    <%= f.text_field :encargado_segiumiento %>
-  </div>
-  <div class="field">
-    <%= f.label :formato_autoseguramiento_paciente %><br>
-    <%= f.text_field :formato_autoseguramiento_paciente %>
-  </div>
-  <div class="field">
-    <%= f.label :instalo_app %><br>
-    <%= f.text_field :instalo_app %>
-  </div>
-  <div class="field">
-    <%= f.label :lista_verificacion_medidas %><br>
-    <%= f.text_field :lista_verificacion_medidas %>
-  </div>
-  <div class="field">
-    <%= f.label :registry_type_id %><br>
-    <%= f.text_field :registry_type_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :betabloqueador_actual %><br>
-    <%= f.text_field :betabloqueador_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :betabloqueador_adherido %><br>
-    <%= f.text_field :betabloqueador_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :betabloqueador_titulacion %><br>
-    <%= f.text_field :betabloqueador_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :anticoagulacion_indicada %><br>
-    <%= f.text_field :anticoagulacion_indicada %>
-  </div>
-  <div class="field">
-    <%= f.label :anticoagulacion_adherido %><br>
-    <%= f.text_field :anticoagulacion_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :iecas_actual %><br>
-    <%= f.text_field :iecas_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :iecas_adherido %><br>
-    <%= f.text_field :iecas_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :iecas_titulacion %><br>
-    <%= f.text_field :iecas_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :araii_actual %><br>
-    <%= f.text_field :araii_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :araii_adherido %><br>
-    <%= f.text_field :araii_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :araii_titulacion %><br>
-    <%= f.text_field :araii_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :mra_actual %><br>
-    <%= f.text_field :mra_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :mra_adherido %><br>
-    <%= f.text_field :mra_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :mra_titulacion %><br>
-    <%= f.text_field :mra_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :diureticos_actual %><br>
-    <%= f.text_field :diureticos_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :diureticos_adherido %><br>
-    <%= f.text_field :diureticos_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :diureticos_titulacion %><br>
-    <%= f.text_field :diureticos_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :ivabradina_actual %><br>
-    <%= f.text_field :ivabradina_actual %>
-  </div>
-  <div class="field">
-    <%= f.label :ivabradina_adherido %><br>
-    <%= f.text_field :ivabradina_adherido %>
-  </div>
-  <div class="field">
-    <%= f.label :ivabradina_titulacion %><br>
-    <%= f.text_field :ivabradina_titulacion %>
-  </div>
-  <div class="field">
-    <%= f.label :visita_seguimiento %><br>
-    <%= f.text_field :visita_seguimiento %>
-  </div>
-  <div class="field">
-    <%= f.label :encargado_visita %><br>
-    <%= f.text_field :encargado_visita %>
-  </div>
-  <div class="field">
-    <%= f.label :dias_despues_alta %><br>
-    <%= f.text_field :dias_despues_alta %>
-  </div>
-  <div class="field">
-    <%= f.label :llenado_formato_autoseguimiento %><br>
-    <%= f.text_field :llenado_formato_autoseguimiento %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  registries_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

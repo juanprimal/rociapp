@@ -1,75 +1,77 @@
-<h1>Listing registries</h1>
-
-<table>
+<%- model_class = Registry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Registry %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Codigo</th>
-      <th>Edad</th>
-      <th>Genero</th>
-      <th>Etilogia</th>
-      <th>Frac eyeccion</th>
-      <th>Imc</th>
-      <th>Hemoglobina</th>
-      <th>Creatinina</th>
-      <th>Bnp</th>
-      <th>Pro bnp</th>
-      <th>Eac</th>
-      <th>Diabetes</th>
-      <th>Irc</th>
-      <th>Epoc</th>
-      <th>Acv</th>
-      <th>Fa</th>
-      <th>Pas mmhg</th>
-      <th>Pad mmhg</th>
-      <th>Fc</th>
-      <th>Clase funcional nyha</th>
-      <th>Betabloqueador</th>
-      <th>Anticoagulacion</th>
-      <th>Iecas</th>
-      <th>Ara ii</th>
-      <th>Mra</th>
-      <th>Diureticos</th>
-      <th>Ivabradina</th>
-      <th>Material educativo</th>
-      <th>Charla informativa</th>
-      <th>Programa seguimiento</th>
-      <th>Encargado segiumiento</th>
-      <th>Formato autoseguramiento paciente</th>
-      <th>Instalo app</th>
-      <th>Lista verificacion medidas</th>
-      <th>Registry type</th>
-      <th>User</th>
-      <th>Betabloqueador actual</th>
-      <th>Betabloqueador adherido</th>
-      <th>Betabloqueador titulacion</th>
-      <th>Anticoagulacion indicada</th>
-      <th>Anticoagulacion adherido</th>
-      <th>Iecas actual</th>
-      <th>Iecas adherido</th>
-      <th>Iecas titulacion</th>
-      <th>Araii actual</th>
-      <th>Araii adherido</th>
-      <th>Araii titulacion</th>
-      <th>Mra actual</th>
-      <th>Mra adherido</th>
-      <th>Mra titulacion</th>
-      <th>Diureticos actual</th>
-      <th>Diureticos adherido</th>
-      <th>Diureticos titulacion</th>
-      <th>Ivabradina actual</th>
-      <th>Ivabradina adherido</th>
-      <th>Ivabradina titulacion</th>
-      <th>Visita seguimiento</th>
-      <th>Encargado visita</th>
-      <th>Dias despues alta</th>
-      <th>Llenado formato autoseguimiento</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:codigo) %></th>
+      <th><%= model_class.human_attribute_name(:edad) %></th>
+      <th><%= model_class.human_attribute_name(:genero) %></th>
+      <th><%= model_class.human_attribute_name(:etilogia) %></th>
+      <th><%= model_class.human_attribute_name(:frac_eyeccion) %></th>
+      <th><%= model_class.human_attribute_name(:imc) %></th>
+      <th><%= model_class.human_attribute_name(:hemoglobina) %></th>
+      <th><%= model_class.human_attribute_name(:creatinina) %></th>
+      <th><%= model_class.human_attribute_name(:bnp) %></th>
+      <th><%= model_class.human_attribute_name(:pro_bnp) %></th>
+      <th><%= model_class.human_attribute_name(:eac) %></th>
+      <th><%= model_class.human_attribute_name(:diabetes) %></th>
+      <th><%= model_class.human_attribute_name(:irc) %></th>
+      <th><%= model_class.human_attribute_name(:epoc) %></th>
+      <th><%= model_class.human_attribute_name(:acv) %></th>
+      <th><%= model_class.human_attribute_name(:fa) %></th>
+      <th><%= model_class.human_attribute_name(:pas_mmhg) %></th>
+      <th><%= model_class.human_attribute_name(:pad_mmhg) %></th>
+      <th><%= model_class.human_attribute_name(:fc) %></th>
+      <th><%= model_class.human_attribute_name(:clase_funcional_nyha) %></th>
+      <th><%= model_class.human_attribute_name(:betabloqueador) %></th>
+      <th><%= model_class.human_attribute_name(:anticoagulacion) %></th>
+      <th><%= model_class.human_attribute_name(:iecas) %></th>
+      <th><%= model_class.human_attribute_name(:ara_ii) %></th>
+      <th><%= model_class.human_attribute_name(:mra) %></th>
+      <th><%= model_class.human_attribute_name(:diureticos) %></th>
+      <th><%= model_class.human_attribute_name(:ivabradina) %></th>
+      <th><%= model_class.human_attribute_name(:material_educativo) %></th>
+      <th><%= model_class.human_attribute_name(:charla_informativa) %></th>
+      <th><%= model_class.human_attribute_name(:programa_seguimiento) %></th>
+      <th><%= model_class.human_attribute_name(:encargado_segiumiento) %></th>
+      <th><%= model_class.human_attribute_name(:formato_autoseguramiento_paciente) %></th>
+      <th><%= model_class.human_attribute_name(:instalo_app) %></th>
+      <th><%= model_class.human_attribute_name(:lista_verificacion_medidas) %></th>
+      <th><%= model_class.human_attribute_name(:betabloqueador_actual) %></th>
+      <th><%= model_class.human_attribute_name(:betabloqueador_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:betabloqueador_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:anticoagulacion_indicada) %></th>
+      <th><%= model_class.human_attribute_name(:anticoagulacion_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:iecas_actual) %></th>
+      <th><%= model_class.human_attribute_name(:iecas_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:iecas_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:araii_actual) %></th>
+      <th><%= model_class.human_attribute_name(:araii_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:araii_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:mra_actual) %></th>
+      <th><%= model_class.human_attribute_name(:mra_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:mra_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:diureticos_actual) %></th>
+      <th><%= model_class.human_attribute_name(:diureticos_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:diureticos_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:ivabradina_actual) %></th>
+      <th><%= model_class.human_attribute_name(:ivabradina_adherido) %></th>
+      <th><%= model_class.human_attribute_name(:ivabradina_titulacion) %></th>
+      <th><%= model_class.human_attribute_name(:visita_seguimiento) %></th>
+      <th><%= model_class.human_attribute_name(:encargado_visita) %></th>
+      <th><%= model_class.human_attribute_name(:dias_despues_alta) %></th>
+      <th><%= model_class.human_attribute_name(:llenado_formato_autoseguimiento) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @registries.each do |registry| %>
       <tr>
+        <td><%= registry.id %></td>
         <td><%= registry.codigo %></td>
         <td><%= registry.edad %></td>
         <td><%= registry.genero %></td>
@@ -104,8 +106,6 @@
         <td><%= registry.formato_autoseguramiento_paciente %></td>
         <td><%= registry.instalo_app %></td>
         <td><%= registry.lista_verificacion_medidas %></td>
-        <td><%= registry.registry_type %></td>
-        <td><%= registry.user %></td>
         <td><%= registry.betabloqueador_actual %></td>
         <td><%= registry.betabloqueador_adherido %></td>
         <td><%= registry.betabloqueador_titulacion %></td>
@@ -130,14 +130,21 @@
         <td><%= registry.encargado_visita %></td>
         <td><%= registry.dias_despues_alta %></td>
         <td><%= registry.llenado_formato_autoseguimiento %></td>
-        <td><%= link_to 'Show', registry %></td>
-        <td><%= link_to 'Edit', edit_registry_path(registry) %></td>
-        <td><%= link_to 'Destroy', registry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l registry.created_at, format: :long %></td>
+        <td>
+          <%= link_to registry_path(registry), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to registry_path(registry), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Registry', new_registry_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_registry_path,
+            :class => 'btn btn-primary' %>

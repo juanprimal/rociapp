@@ -1,304 +1,138 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Registry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Registry %></h1>
+</div>
 
-<p>
-  <strong>Codigo:</strong>
-  <%= @registry.codigo %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:codigo) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.codigo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:edad) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.edad %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:genero) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.genero %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:etilogia) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.etilogia %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:frac_eyeccion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.frac_eyeccion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:imc) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.imc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:hemoglobina) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.hemoglobina %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:creatinina) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.creatinina %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:bnp) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.bnp %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pro_bnp) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.pro_bnp %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:eac) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.eac %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diabetes) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.diabetes %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:irc) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.irc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:epoc) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.epoc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:acv) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.acv %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:fa) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.fa %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pas_mmhg) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.pas_mmhg %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:pad_mmhg) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.pad_mmhg %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:fc) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.fc %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:clase_funcional_nyha) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.clase_funcional_nyha %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:betabloqueador) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.betabloqueador %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:anticoagulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.anticoagulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:iecas) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.iecas %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ara_ii) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.ara_ii %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mra) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.mra %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diureticos) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.diureticos %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ivabradina) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.ivabradina %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:material_educativo) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.material_educativo %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:charla_informativa) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.charla_informativa %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:programa_seguimiento) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.programa_seguimiento %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:encargado_segiumiento) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.encargado_segiumiento %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:formato_autoseguramiento_paciente) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.formato_autoseguramiento_paciente %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:instalo_app) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.instalo_app %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:lista_verificacion_medidas) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.lista_verificacion_medidas %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:betabloqueador_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.betabloqueador_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:betabloqueador_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.betabloqueador_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:betabloqueador_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.betabloqueador_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:anticoagulacion_indicada) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.anticoagulacion_indicada %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:anticoagulacion_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.anticoagulacion_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:iecas_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.iecas_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:iecas_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.iecas_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:iecas_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.iecas_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:araii_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.araii_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:araii_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.araii_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:araii_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.araii_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mra_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.mra_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mra_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.mra_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mra_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.mra_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diureticos_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.diureticos_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diureticos_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.diureticos_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:diureticos_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.diureticos_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ivabradina_actual) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.ivabradina_actual %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ivabradina_adherido) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.ivabradina_adherido %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:ivabradina_titulacion) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.ivabradina_titulacion %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:visita_seguimiento) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.visita_seguimiento %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:encargado_visita) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.encargado_visita %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:dias_despues_alta) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.dias_despues_alta %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:llenado_formato_autoseguimiento) %></dt>
+      <dd><pre class="prettyprint"><%= @registry.llenado_formato_autoseguimiento %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Edad:</strong>
-  <%= @registry.edad %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              registries_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_registry_path(@registry), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              registry_path(@registry),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Genero:</strong>
-  <%= @registry.genero %>
-</p>
-
-<p>
-  <strong>Etilogia:</strong>
-  <%= @registry.etilogia %>
-</p>
-
-<p>
-  <strong>Frac eyeccion:</strong>
-  <%= @registry.frac_eyeccion %>
-</p>
-
-<p>
-  <strong>Imc:</strong>
-  <%= @registry.imc %>
-</p>
-
-<p>
-  <strong>Hemoglobina:</strong>
-  <%= @registry.hemoglobina %>
-</p>
-
-<p>
-  <strong>Creatinina:</strong>
-  <%= @registry.creatinina %>
-</p>
-
-<p>
-  <strong>Bnp:</strong>
-  <%= @registry.bnp %>
-</p>
-
-<p>
-  <strong>Pro bnp:</strong>
-  <%= @registry.pro_bnp %>
-</p>
-
-<p>
-  <strong>Eac:</strong>
-  <%= @registry.eac %>
-</p>
-
-<p>
-  <strong>Diabetes:</strong>
-  <%= @registry.diabetes %>
-</p>
-
-<p>
-  <strong>Irc:</strong>
-  <%= @registry.irc %>
-</p>
-
-<p>
-  <strong>Epoc:</strong>
-  <%= @registry.epoc %>
-</p>
-
-<p>
-  <strong>Acv:</strong>
-  <%= @registry.acv %>
-</p>
-
-<p>
-  <strong>Fa:</strong>
-  <%= @registry.fa %>
-</p>
-
-<p>
-  <strong>Pas mmhg:</strong>
-  <%= @registry.pas_mmhg %>
-</p>
-
-<p>
-  <strong>Pad mmhg:</strong>
-  <%= @registry.pad_mmhg %>
-</p>
-
-<p>
-  <strong>Fc:</strong>
-  <%= @registry.fc %>
-</p>
-
-<p>
-  <strong>Clase funcional nyha:</strong>
-  <%= @registry.clase_funcional_nyha %>
-</p>
-
-<p>
-  <strong>Betabloqueador:</strong>
-  <%= @registry.betabloqueador %>
-</p>
-
-<p>
-  <strong>Anticoagulacion:</strong>
-  <%= @registry.anticoagulacion %>
-</p>
-
-<p>
-  <strong>Iecas:</strong>
-  <%= @registry.iecas %>
-</p>
-
-<p>
-  <strong>Ara ii:</strong>
-  <%= @registry.ara_ii %>
-</p>
-
-<p>
-  <strong>Mra:</strong>
-  <%= @registry.mra %>
-</p>
-
-<p>
-  <strong>Diureticos:</strong>
-  <%= @registry.diureticos %>
-</p>
-
-<p>
-  <strong>Ivabradina:</strong>
-  <%= @registry.ivabradina %>
-</p>
-
-<p>
-  <strong>Material educativo:</strong>
-  <%= @registry.material_educativo %>
-</p>
-
-<p>
-  <strong>Charla informativa:</strong>
-  <%= @registry.charla_informativa %>
-</p>
-
-<p>
-  <strong>Programa seguimiento:</strong>
-  <%= @registry.programa_seguimiento %>
-</p>
-
-<p>
-  <strong>Encargado segiumiento:</strong>
-  <%= @registry.encargado_segiumiento %>
-</p>
-
-<p>
-  <strong>Formato autoseguramiento paciente:</strong>
-  <%= @registry.formato_autoseguramiento_paciente %>
-</p>
-
-<p>
-  <strong>Instalo app:</strong>
-  <%= @registry.instalo_app %>
-</p>
-
-<p>
-  <strong>Lista verificacion medidas:</strong>
-  <%= @registry.lista_verificacion_medidas %>
-</p>
-
-<p>
-  <strong>Registry type:</strong>
-  <%= @registry.registry_type %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @registry.user %>
-</p>
-
-<p>
-  <strong>Betabloqueador actual:</strong>
-  <%= @registry.betabloqueador_actual %>
-</p>
-
-<p>
-  <strong>Betabloqueador adherido:</strong>
-  <%= @registry.betabloqueador_adherido %>
-</p>
-
-<p>
-  <strong>Betabloqueador titulacion:</strong>
-  <%= @registry.betabloqueador_titulacion %>
-</p>
-
-<p>
-  <strong>Anticoagulacion indicada:</strong>
-  <%= @registry.anticoagulacion_indicada %>
-</p>
-
-<p>
-  <strong>Anticoagulacion adherido:</strong>
-  <%= @registry.anticoagulacion_adherido %>
-</p>
-
-<p>
-  <strong>Iecas actual:</strong>
-  <%= @registry.iecas_actual %>
-</p>
-
-<p>
-  <strong>Iecas adherido:</strong>
-  <%= @registry.iecas_adherido %>
-</p>
-
-<p>
-  <strong>Iecas titulacion:</strong>
-  <%= @registry.iecas_titulacion %>
-</p>
-
-<p>
-  <strong>Araii actual:</strong>
-  <%= @registry.araii_actual %>
-</p>
-
-<p>
-  <strong>Araii adherido:</strong>
-  <%= @registry.araii_adherido %>
-</p>
-
-<p>
-  <strong>Araii titulacion:</strong>
-  <%= @registry.araii_titulacion %>
-</p>
-
-<p>
-  <strong>Mra actual:</strong>
-  <%= @registry.mra_actual %>
-</p>
-
-<p>
-  <strong>Mra adherido:</strong>
-  <%= @registry.mra_adherido %>
-</p>
-
-<p>
-  <strong>Mra titulacion:</strong>
-  <%= @registry.mra_titulacion %>
-</p>
-
-<p>
-  <strong>Diureticos actual:</strong>
-  <%= @registry.diureticos_actual %>
-</p>
-
-<p>
-  <strong>Diureticos adherido:</strong>
-  <%= @registry.diureticos_adherido %>
-</p>
-
-<p>
-  <strong>Diureticos titulacion:</strong>
-  <%= @registry.diureticos_titulacion %>
-</p>
-
-<p>
-  <strong>Ivabradina actual:</strong>
-  <%= @registry.ivabradina_actual %>
-</p>
-
-<p>
-  <strong>Ivabradina adherido:</strong>
-  <%= @registry.ivabradina_adherido %>
-</p>
-
-<p>
-  <strong>Ivabradina titulacion:</strong>
-  <%= @registry.ivabradina_titulacion %>
-</p>
-
-<p>
-  <strong>Visita seguimiento:</strong>
-  <%= @registry.visita_seguimiento %>
-</p>
-
-<p>
-  <strong>Encargado visita:</strong>
-  <%= @registry.encargado_visita %>
-</p>
-
-<p>
-  <strong>Dias despues alta:</strong>
-  <%= @registry.dias_despues_alta %>
-</p>
-
-<p>
-  <strong>Llenado formato autoseguimiento:</strong>
-  <%= @registry.llenado_formato_autoseguimiento %>
-</p>
-
-<%= link_to 'Edit', edit_registry_path(@registry) %> |
-<%= link_to 'Back', registries_path %>

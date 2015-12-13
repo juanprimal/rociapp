@@ -1,6 +1,5 @@
-<h1>Editing registry</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @registry %> |
-<%= link_to 'Back', registries_path %>
+<%- model_class = Registry -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Registry %></h1>
+</div>
+<%= render :partial => 'form' %>
